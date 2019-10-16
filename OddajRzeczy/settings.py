@@ -55,7 +55,7 @@ ROOT_URLCONF = 'OddajRzeczy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'charity_donation',
-        'USER': 'postgres',
-        'PASSWORD': 'coderslab',
+        'USER': 'jakub',
+        'PASSWORD': 'lo13ptwsl',
         'HOST': 'localhost',
         'PORT': '',
 
@@ -124,3 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
